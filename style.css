@@ -1,0 +1,1120 @@
+/* =========================================
+   CLEAR BUST
+   HOME PAGE - UPDATED COLOR SYSTEM
+   ========================================= */
+
+
+/* ================= FONTS ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&display=swap');
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #FFFFFF;
+    color: #163A59;
+}
+
+
+/* ================= COLORS ================= */
+
+:root {
+    /* Main bottle-inspired blue */
+    --primary-blue: #9CCBE8;
+
+    /* Slightly stronger blue */
+    --medium-blue: #4F88B5;
+
+    /* Dark color only for text/buttons */
+    --dark-text: #163A59;
+
+    /* Light section backgrounds */
+    --pale-blue: #EAF4FA;
+    --soft-blue: #F4F9FC;
+
+    --white: #FFFFFF;
+    --text: #425466;
+
+    /* German accent colors */
+    --red: #D63332;
+    --gold: #EFB83F;
+    --black: #171717;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+    height: 95px;
+    padding: 0 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #FFFFFF;
+
+    border-bottom: 1px solid #D5E5EE;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 165px;
+    height: auto;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    gap: 40px;
+}
+
+nav a {
+    color: var(--dark-text);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--medium-blue);
+
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   GLOBAL TEXT
+   ========================================= */
+
+.eyebrow {
+    color: var(--medium-blue);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 3.5px;
+
+    margin-bottom: 14px;
+}
+
+.eyebrow.light {
+    color: #315A77;
+}
+
+
+/* =========================================
+   GERMAN ACCENT STRIPE
+   ========================================= */
+
+.german-line {
+    display: flex;
+
+    width: 52px;
+    height: 4px;
+
+    margin-bottom: 25px;
+}
+
+.german-line span {
+    flex: 1;
+}
+
+.german-line .black {
+    background-color: var(--black);
+}
+
+.german-line .red {
+    background-color: var(--red);
+}
+
+.german-line .gold {
+    background-color: var(--gold);
+}
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+    min-height: 680px;
+
+    padding: 70px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background-color: var(--soft-blue);
+
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero h1 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(72px, 7.5vw, 112px);
+
+    line-height: 0.86;
+
+    letter-spacing: 2px;
+
+    color: var(--dark-text);
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--medium-blue);
+}
+
+.hero-text {
+    max-width: 570px;
+
+    color: var(--text);
+
+    font-size: 18px;
+
+    line-height: 1.75;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   HERO PRODUCT IMAGE
+   ========================================= */
+
+.hero-product {
+    width: 500px;
+    height: 500px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 45px rgba(22, 58, 89, 0.14);
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    transition: transform 0.35s ease;
+}
+
+.hero-product:hover .product-image {
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.main-button {
+    display: inline-block;
+
+    padding: 16px 31px;
+
+    background-color: var(--dark-text);
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    border: 2px solid var(--dark-text);
+
+    transition: 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: var(--primary-blue);
+
+    color: var(--dark-text);
+
+    border-color: var(--primary-blue);
+}
+
+
+/* =========================================
+   INTRO SECTION
+   ========================================= */
+
+.intro {
+    padding: 120px 10%;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 100px;
+
+    background-color: #FFFFFF;
+}
+
+.intro-left h2 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 72px;
+
+    line-height: 0.9;
+
+    letter-spacing: 1px;
+
+    color: var(--dark-text);
+}
+
+.intro-left h2 span {
+    display: block;
+
+    color: var(--medium-blue);
+}
+
+.intro-right {
+    max-width: 700px;
+
+    padding-top: 20px;
+}
+
+.intro-right p {
+    color: var(--text);
+
+    font-size: 17px;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+.intro-right .intro-large {
+    color: var(--dark-text);
+
+    font-size: 27px;
+
+    line-height: 1.5;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   WHY CLEAR BUST
+   ========================================= */
+
+.why-section {
+    padding: 110px 8% 70px;
+
+    background-color: var(--primary-blue);
+
+    color: var(--dark-text);
+
+    overflow: hidden;
+}
+
+
+/* WHY HEADING */
+
+.why-heading {
+    max-width: 850px;
+
+    margin-bottom: 75px;
+}
+
+.why-heading h2 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 76px;
+
+    line-height: 0.88;
+
+    letter-spacing: 1.5px;
+
+    color: var(--dark-text);
+}
+
+.why-heading h2 span {
+    display: block;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   WHY LAYOUT
+   ========================================= */
+
+.why-layout {
+    max-width: 1200px;
+
+    min-height: 600px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-rows: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+
+/* WHY TEXT */
+
+.why-item {
+    max-width: 300px;
+}
+
+.why-number {
+    display: block;
+
+    color: #FFFFFF;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 35px;
+
+    margin-bottom: 12px;
+}
+
+.why-item h3 {
+    color: var(--dark-text);
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 38px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+.why-item p {
+    color: #315A77;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* POSITIONS */
+
+.secret {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    align-self: center;
+}
+
+.roots {
+    grid-column: 3;
+    grid-row: 1;
+
+    align-self: end;
+}
+
+.moment {
+    grid-column: 3;
+    grid-row: 2;
+
+    align-self: start;
+
+    margin-top: 40px;
+}
+
+
+/* =========================================
+   WHY PRODUCT IMAGE
+   ========================================= */
+
+.why-product {
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    height: 580px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.why-product img {
+    width: 450px;
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 28px;
+
+    display: block;
+
+    box-shadow:
+        0 20px 40px rgba(22, 58, 89, 0.20);
+
+    transition: transform 0.35s ease;
+}
+
+.why-product img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   WHY FOOTER
+   ========================================= */
+
+.why-footer {
+    max-width: 1200px;
+
+    margin: 70px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(22, 58, 89, 0.22);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    color: #315A77;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.why-footer .german-line {
+    width: 45px;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   CATALOGUE SECTION
+   ========================================= */
+
+.catalogue {
+    min-height: 560px;
+
+    padding: 110px 10%;
+
+    display: grid;
+
+    grid-template-columns: 0.35fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background-color: var(--pale-blue);
+}
+
+.catalogue-number {
+    color: rgba(79, 136, 181, 0.12);
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 220px;
+
+    line-height: 1;
+}
+
+.catalogue-content {
+    max-width: 700px;
+}
+
+.catalogue-content h2 {
+    color: var(--dark-text);
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 80px;
+
+    line-height: 0.9;
+
+    margin-bottom: 20px;
+}
+
+.catalogue-content h2 span {
+    display: block;
+
+    color: var(--medium-blue);
+}
+
+.catalogue-question {
+    color: var(--dark-text) !important;
+
+    font-size: 26px !important;
+
+    font-weight: 700;
+}
+
+.catalogue-content > p:not(.eyebrow) {
+    color: var(--text);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+
+.contact {
+    padding: 120px 10%;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+
+    background-color: #FFFFFF;
+}
+
+.contact-info h2 {
+    color: var(--dark-text);
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 78px;
+
+    line-height: 0.88;
+
+    margin-bottom: 25px;
+}
+
+.contact-info h2 span {
+    display: block;
+
+    color: var(--medium-blue);
+}
+
+.contact-info > p:not(.eyebrow) {
+    max-width: 450px;
+
+    color: var(--text);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.small-note {
+    color: #71818E !important;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+
+form {
+    width: 100%;
+
+    max-width: 650px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    color: var(--dark-text);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    background-color: var(--soft-blue);
+
+    border: none;
+
+    border-bottom: 2px solid #BED5E2;
+
+    outline: none;
+
+    color: var(--dark-text);
+
+    font-family: "Lato", sans-serif;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: var(--medium-blue);
+
+    background-color: var(--pale-blue);
+}
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+
+    padding: 16px;
+
+    background-color: var(--dark-text);
+
+    color: #FFFFFF;
+
+    border: 2px solid var(--dark-text);
+
+    font-family: "Lato", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--primary-blue);
+
+    border-color: var(--primary-blue);
+
+    color: var(--dark-text);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    padding: 65px 7% 30px;
+
+    background-color: var(--primary-blue);
+
+    color: var(--dark-text);
+}
+
+.footer-logo {
+    width: 145px;
+
+    margin-bottom: 15px;
+
+    /* Keeps the actual Clear Bust logo colors */
+    filter: none;
+}
+
+.footer > p {
+    color: #315A77;
+
+    font-size: 14px;
+}
+
+.socials {
+    margin: 30px 0;
+}
+
+.socials a {
+    color: var(--dark-text);
+
+    text-decoration: none;
+
+    margin-right: 25px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.socials a:hover {
+    color: #FFFFFF;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(22, 58, 89, 0.22);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #315A77;
+
+    font-size: 11px;
+}
+
+.footer-bottom a {
+    color: var(--dark-text);
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-content .german-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-product {
+        width: 440px;
+        height: 440px;
+
+        border-radius: 24px;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .why-layout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .why-product {
+        grid-column: 1 / 3;
+        grid-row: 1;
+
+        height: 500px;
+    }
+
+    .why-product img {
+        width: 420px;
+        height: 420px;
+
+        border-radius: 24px;
+    }
+
+    .secret {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .roots {
+        grid-column: 2;
+        grid-row: 2;
+
+        align-self: auto;
+    }
+
+    .moment {
+        grid-column: 1;
+        grid-row: 3;
+
+        margin-top: 20px;
+    }
+
+    .catalogue {
+        grid-template-columns: 1fr;
+    }
+
+    .catalogue-number {
+        display: none;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        height: auto;
+
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo {
+        width: 135px;
+    }
+
+    nav ul {
+        gap: 17px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 70px 25px;
+    }
+
+    .hero h1 {
+        font-size: 67px;
+    }
+
+    .hero-product {
+        width: 320px;
+        height: 320px;
+
+        border-radius: 20px;
+    }
+
+    .intro,
+    .why-section,
+    .catalogue,
+    .contact {
+        padding: 75px 25px;
+    }
+
+    .intro-left h2 {
+        font-size: 56px;
+    }
+
+    .intro-right .intro-large {
+        font-size: 22px;
+    }
+
+    .why-heading {
+        margin-bottom: 40px;
+    }
+
+    .why-heading h2 {
+        font-size: 58px;
+    }
+
+    .why-layout {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+    .why-product {
+        width: 100%;
+
+        height: auto;
+
+        order: -1;
+    }
+
+    .why-product img {
+        width: 100%;
+
+        max-width: 350px;
+
+        height: 350px;
+
+        object-fit: cover;
+
+        border-radius: 20px;
+    }
+
+    .why-item {
+        max-width: 100%;
+    }
+
+    .secret,
+    .roots,
+    .moment {
+        margin: 0;
+    }
+
+    .why-footer {
+        flex-wrap: wrap;
+    }
+
+    .catalogue-content h2 {
+        font-size: 60px;
+    }
+
+    .catalogue-question {
+        font-size: 22px !important;
+    }
+
+    .contact-info h2 {
+        font-size: 60px;
+    }
+
+    .main-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+.hidden {
+    display: none;
+}
